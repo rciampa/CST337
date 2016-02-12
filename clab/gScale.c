@@ -23,17 +23,12 @@ void convert_to_grayscale(unsigned int pixelarr[], unsigned int size){
 int main(int argc, char *argv) 
 {
 
-  int j = 5225, m, n, size;
   //Two int values as hex A R G B
-  unsigned int pixels [] = {0xAA112233, 0xBB334455};
+  unsigned int pixels [] = {0xAA112233, 0xBB334455}, m, n, size = 0, p = 0;
   size = 2;
 
   convert_to_grayscale(pixels, size);
   
-   /* assume we have a function that prints a binary string when given 
-    * a decimal integer 
-    */
-   int p;
    for(p = 0; p < size; p++){
       printf("\nThe decimal %u is equal to binary - ", pixels[p]);
       show_bits(pixels[p]);

@@ -1,6 +1,12 @@
+/*
+ * Author: Richard Ciampa
+ * Date:2/11/2016
+ * Class: CST337 SP216
+ */
+ 
 #include <stdio.h>
     
-void showbits(unsigned int x)
+void show_bits(unsigned int x)
 {
    int i; 
    //Because int is 4 bytes we multiply by 8 (8 bits/byte)
@@ -22,7 +28,7 @@ int main(int argc, char *argv)
   unsigned int pixels [] = {0xAA112233, 0xBB334455};
   size = 2;
 
-  convert_to_grayscale(pixels, 2);
+  convert_to_grayscale(pixels, size);
   
    /* assume we have a function that prints a binary string when given 
     * a decimal integer 
@@ -30,13 +36,13 @@ int main(int argc, char *argv)
    int p;
    for(p = 0; p < size; p++){
       printf("\nThe decimal %u is equal to binary - ", pixels[p]);
-      showbits(pixels[p]);
+      show_bits(pixels[p]);
 
       /* the loop for right shift operation */
       for ( m = 0; m <= 5; m++ ) {
          n = pixels[p] >> m;
          printf("%u right shift %d gives ", pixels[p], m);
-         showbits(n);
+         show_bits(n);
       }
    }
 

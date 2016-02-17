@@ -16,7 +16,7 @@ void show_bits(unsigned int x){
 }
 
 int convert_to_grayscale(unsigned int rgba){
-    int r, g, b, a, mask = 0x000000ff
+    int r, g, b, a, mask = 0xff
     
     r = (rgba >> 0) & mask;
     g = (rgba >> 8) & mask;

@@ -16,12 +16,17 @@ void show_bits(unsigned int x){
 }
 
 int convert_to_grayscale(unsigned int rgba){
-    int r, g, b, a, mask = 0xff
+    int r, g, b, a, rgb, mask = 0xff;
     
     r = (rgba >> 0) & mask;
     g = (rgba >> 8) & mask;
     b = (rgba >> 16) & mask;
     a = (rgba >> 24) & mask;
+    
+    rgb = (r + g + b) / 3;
+    
+    return (a << 24) + (rgb << 16) + (rgb << 8) + (rgb << 0);
+    
 }
 
 int main(int argc, char *argv[]){

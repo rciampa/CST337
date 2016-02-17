@@ -6,8 +6,7 @@
  
 #include <stdio.h>
     
-void show_bits(unsigned int x)
-{
+void show_bits(unsigned int x){
    int i; 
    //Because int is 4 bytes we multiply by 8 (8 bits/byte)
    for(i = (sizeof(int) * 8) - 1; i >= 0; i--)
@@ -20,8 +19,7 @@ void convert_to_grayscale(unsigned int pixelarr[], unsigned int size){
     printf("pix 1: %u pix 2: %u \n", pixelarr[0], pixelarr[1]);
 }
 
-int main(int argc, char *argv) 
-{
+int main(int argc, char *argv[]){
 
   //Two int values as hex A R G B
   unsigned int pixels [] = {0xAA112233, 0xBB334455}, m, n, size = 0, p = 0;

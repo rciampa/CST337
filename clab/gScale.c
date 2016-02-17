@@ -15,8 +15,13 @@ void show_bits(unsigned int x){
     printf("\n");
 }
 
-void convert_to_grayscale(unsigned int pixelarr[], unsigned int size){
-    printf("pix 1: %u pix 2: %u \n", pixelarr[0], pixelarr[1]);
+int convert_to_grayscale(unsigned int rgba){
+    int r, g, b, a;
+    
+    r = (rgba >> 0) & 0xff;
+    g = (rgba >> 8) & 0xff;
+    b = (rgba >> 16) & 0xff;
+    a = (rgba >> 24) & 0xff;
 }
 
 int main(int argc, char *argv[]){
@@ -25,14 +30,14 @@ int main(int argc, char *argv[]){
   unsigned int pixels [] = {0xAA112233, 0xBB334455}, m, n, size = 0, p = 0;
   size = 2;
 
-  convert_to_grayscale(pixels, size);
+  convert_to_grayscale(*pixels);
   
    for(p = 0; p < size; p++){
       printf("\nThe decimal %u is equal to binary - ", pixels[p]);
       show_bits(pixels[p]);
 
       /* the loop for right shift operation */
-      for ( m = 0; m <= 5; m++ ) {
+      for (m = 0; m <= 5; m++) {
          n = pixels[p] >> m;
          printf("%u right shift %d gives ", pixels[p], m);
          show_bits(n);

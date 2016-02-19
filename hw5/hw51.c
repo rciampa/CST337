@@ -1,5 +1,5 @@
 /*
- * Author: Richard Ciamps
+ * Author: Richard Ciampa
  * Course: CST337
  * Date: 2/18/2016
  */

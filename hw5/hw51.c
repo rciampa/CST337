@@ -15,14 +15,14 @@ int main(int argc, char *argv[]){
   
   //We only need the size of one because they are equal   
   size_t argSize = strlen(argv[1]);
-  char result[argSize];
+  //Print the result
+  printf("Result of AND: ");
   //Loop through the command line args 
   for(int i = 0; i < argSize; i++){
-   result[i] = and_gate(argv[1][i], argv[2][i]);
-  }
   //Print the result
-  printf("Result of AND: %s \n", result);
-  
+  printf("%c", and_gate(argv[1][i], argv[2][i]) );
+  }
+  printf("\n");
  }
   return 0;
 }

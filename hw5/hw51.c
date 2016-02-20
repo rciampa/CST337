@@ -12,7 +12,6 @@ char and_gate(char a, char b);
 int main(int argc, char *argv[]){
  
  if(argc == 3 && (strlen(argv[1]) == strlen(argv[2]))){
-  
   //We only need the size of one because they are equal   
   size_t argSize = strlen(argv[1]);
   //Print the result
